@@ -1,4 +1,4 @@
-import asyncio, re, ast, math, logging, pyrogram
+import asyncio, re, ast, math, logging, pyrogram, os
 from pyrogram.errors.exceptions.bad_request_400 import MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty
 from Script import script
 from utils import get_shortlink 
@@ -13,6 +13,8 @@ from plugins.group_filter import global_filters
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
+
+req_channel = int(os.environ.get('REQ_CHANNEL',''))
 
 PM_BUTTONS = {}
 PM_SPELL_CHECK = {}
