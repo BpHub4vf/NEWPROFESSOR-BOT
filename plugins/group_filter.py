@@ -20,7 +20,7 @@ from plugins.helper.admin_check import admin_fliter
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
 
-REQ_CHANNEL = int(environ.get('REQ_CHANNEL'))
+REQ_CHANNEL = int(os.environ.get('REQ_CHANNEL',''))
 
 FILTER_MODE = {}
 G_MODE = {}
